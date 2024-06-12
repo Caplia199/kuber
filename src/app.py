@@ -17,4 +17,7 @@ def calculate():
     return render_template('index.html', result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    host = '127.0.0.1'
+    port = 5000
+    print(f"Приложение запущено по адресу http://{host}:{port}/")
+    app.run(host=host, port=port, debug=True)
